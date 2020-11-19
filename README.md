@@ -12,8 +12,7 @@ This setup explains how to start receiving budget notifications on slack. The Se
 
 2. Save the Bot User OAuth Access Token somewhere as it is needed for the Cloud Function.
 
-2. In BigQuery, add a new dataset called ***billing*** and create a new table called ***budget***. The schema for the table is shown below:
-
+3. In BigQuery, add a new dataset called ***billing*** and create a new table called ***budget***. The schema for the table is shown below:
 ```
 [
  {
@@ -49,11 +48,11 @@ This setup explains how to start receiving budget notifications on slack. The Se
  ]
 ```
 
-3. Create a new Cloud Pub/Sub topic called ***billing-alerts***. This topic will be used for the billing alert publisher.
+4. Create a new Cloud Pub/Sub topic called ***billing-alerts***. This topic will be used for the billing alert publisher.
 
-4. Navigate to Billing in the Google Cloud Console and create a budget. When creating your budget, modify "Manage notifications" to configure the Cloud Pub/Sub topic ***billing-alerts*** that was created in the previous step¹.
+5. Navigate to Billing in the Google Cloud Console and create a budget. When creating your budget, modify "Manage notifications" to configure the Cloud Pub/Sub topic ***billing-alerts*** that was created in the previous step¹.
 
-5. Navigate to Cloud Functions in the Google Cloud Console and create a new cloud function with the following settings:
+6. Navigate to Cloud Functions in the Google Cloud Console and create a new cloud function with the following settings:
 
     - Name: slack-billing-notification
     - Trigger: Cloud Pub/Sub
@@ -62,14 +61,14 @@ This setup explains how to start receiving budget notifications on slack. The Se
     - Runtime: Node.js 10
     - Function to execute: notifySlack
 
-6. Configure two Runtime variables:
+7. Configure two Runtime variables:
 
     - SLACK_CHANNEL: The name of the slack channel where the notifications should be sent to.
     - BOT_ACCESS_TOKEN: The Bot Token that was created in the first step.
 
-7. Add the index.js and package.json files to the inline editor.
+8. Add the index.js and package.json files to the inline editor.
 
-8. Click deploy.
+9. Click deploy.
 
 # Testing
 
