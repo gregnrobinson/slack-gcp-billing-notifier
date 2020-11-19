@@ -63,7 +63,7 @@ This setup explains how to start receiving budget notifications on slack. The Se
 
 7. Configure two Runtime variables:
 
-    - SLACK_CHANNEL: The name of the slack channel where the notifications should be sent to.
+    - GCP_PROJECT: The project variable to be used for the BigQuery Dataset.
     - BOT_ACCESS_TOKEN: The Bot Token that was created in the first step.
 
 8. Add the index.js and package.json files to the inline editor.
