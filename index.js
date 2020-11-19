@@ -19,6 +19,11 @@ exports.notifySlack = async data => {
   //Check if threshold is 0 or not. If so, don't notify. This will avoid Pub/Subs 30 minute frequency of sending messages.
   if (!isFinite(threshold)){
     threshold = 0;
+  } else if (threshold == 0) {
+    return 'No need to notify team, budget is 0% utilized';
+  } 
+
+  if (threshold == 0){
     return 'No need to notify team, budget is 0% utilized';
   }
 
