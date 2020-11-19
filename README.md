@@ -1,5 +1,7 @@
 # Setup
 
+This setup explains how to start receiving budget notifications on slack. The Services used in this swetup include Pub/Sub, Budgets, and Cloud Functions. A Budget message will be sent to Pub/Sub which will trigger a Cloud Function where the function uses the submitted Pub/Sub data and the Slack API to send a notification to a Slack channel.
+
 1. Go to https://api.slack.com/apps and create an applicarion with the following permissions under OAuth and Permissions > Scopes > Bot Token Scopes.
 
     - chat:write.public
