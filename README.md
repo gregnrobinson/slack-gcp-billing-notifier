@@ -27,7 +27,7 @@
 
 6. Click deploy.
 
-### Testing
+# Testing
 
 It is requried to encode the Pub/Sub test data as Base64. The snippet below is some plain JSON data that would be similar to the actual data.
 ```
