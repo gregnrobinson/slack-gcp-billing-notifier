@@ -25,7 +25,7 @@
 - SLACK_CHANNEL: The name of the slack channel where the notifications should be sent to.
 - BOT_ACCESS_TOKEN: The Bot Token that was created in  the first step.
 
-6. Click deploy. When deployment finished, go to the Testing tab.
+6. Click deploy.
 
 ### Testing
 
