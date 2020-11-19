@@ -62,4 +62,6 @@ And that is all, you should see a notification when you run the test. The result
 
 ![alt text](https://github.com/gregnrobinson/slack-gcp-billing-notifier/blob/main/images/slack_notification.png "Slack Example Notification")
 
+I recommend adding an icon to the app to make it pretty. you can do that here https://api.slack.com/apps.
+
 
