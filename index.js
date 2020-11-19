@@ -14,8 +14,14 @@ exports.notifySlack = async data => {
   const costAmount = formatter.format(pubsubData.costAmount);
   const budgetAmount = formatter.format(pubsubData.budgetAmount);
   const budgetName = pubsubData.budgetDisplayName;
-  let threshold = (pubsubData.alertThresholdExceeded*100).toFixed(0);
+  let threshold = (pubsubData.alertThresholdExceeded*100).toFixed(0);    
   
+  //Check if threshold is 0 or not. If so, don't notify. This will avoid Pub/Subs 30 minute frequency of sending messages.
+  if (!isFinite(threshold)){
+    threshold = 0;
+    return 'No need to notify team, budget is 0% utilized';
+  }
+
   //Set Emoticon based on threshold percentage
   const emoticon = threshold >= 90 ? ':fire:' : ':smile:';
 
