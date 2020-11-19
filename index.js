@@ -20,7 +20,7 @@ exports.notifySlack = async data => {
   const emoticon = threshold >= 90 ? ':fire:' : ':smile:';
 
   //Test to be sent to Slack
-  notification = `${emoticon} ${budgetName} \n\nThis is an automated notification to inform you that the billing account for hiptogive.org has exceeded ${threshold}% of the monthly budget of ${budgetAmount}.\n\nThe billing account has accrued ${costAmount} in costs so far for the month.`
+  notification = `${emoticon} ${budgetName} \n\nThis is an automated notification to inform you that the billing account has exceeded ${threshold}% of the monthly budget of ${budgetAmount}.\n\nThe billing account has accrued ${costAmount} in costs so far for the month.`
 
   //Post to Slack channel with Bot Token
   await slack.chat.postMessage({
