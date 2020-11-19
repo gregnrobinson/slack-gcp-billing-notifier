@@ -3,7 +3,6 @@
 This setup explains how to start receiving budget notifications on slack. The Services used in this setup include Pub/Sub, Budgets, BigQuery, and Cloud Functions. A Budget message will be sent to Pub/Sub which will trigger a Cloud Function where the function uses the submitted Pub/Sub data to create an entry in a table within BigQuery. After data has been sent a query takes places followed by a condition to ensure that duplicate messages are not sent to Slack.
 
 
-
 1. Go to https://api.slack.com/apps and create an applicarion with the following permissions under ***OAuth and Permissions > Scopes > Bot Token Scopes.***
 
     - chat:write.public
@@ -12,6 +11,43 @@ This setup explains how to start receiving budget notifications on slack. The Se
     - chat:write.customize
 
 2. Save the Bot User OAuth Access Token somewhere as it is needed for the Cloud Function.
+
+2. In BigQuery, add a new dataset called ***billing*** and create a new table called ***budget***. The schema for the table is shown below:
+
+```
+[
+ {
+ "name": "createdAt",
+ "type": "TIMESTAMP",
+ "mode": "NULLABLE"
+ },
+ {
+ "name": "costAmount",
+ "type": "NUMERIC",
+ "mode": "NULLABLE"
+ },
+ {
+ "name": "budgetAmount",
+ "type": "NUMERIC",
+ "mode": "NULLABLE"
+ },
+ {
+ "name": "budgetName",
+ "type": "STRING",
+ "mode": "NULLABLE"
+ },
+ {
+ "name": "budgetId",
+ "type": "STRING",
+ "mode": "NULLABLE"
+ },
+ {
+ "name": "threshold",
+ "type": "NUMERIC",
+ "mode": "NULLABLE"
+ }
+ ]
+```
 
 3. Create a new Cloud Pub/Sub topic called ***billing-alerts***. This topic will be used for the billing alert publisher.
 
