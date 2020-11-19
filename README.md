@@ -2,6 +2,8 @@
 
 This setup explains how to start receiving budget notifications on slack. The Services used in this setup include Pub/Sub, Budgets, BigQuery, and Cloud Functions. A Budget message will be sent to Pub/Sub which will trigger a Cloud Function where the function uses the submitted Pub/Sub data to create an entry in a table within BigQuery. After data has been sent a query takes places followed by a condition to ensure that duplicate messages are not sent to Slack.
 
+![alt text](https://github.com/gregnrobinson/slack-gcp-billing-notifier/blob/main/images/architecture.png "Architecture")
+
 
 1. Go to https://api.slack.com/apps and create an applicarion with the following permissions under ***OAuth and Permissions > Scopes > Bot Token Scopes.***
 
