@@ -1,7 +1,5 @@
 # Setup
 
-## Create a New Slack Application
-
 1. Go to https://api.slack.com/apps and create an access token with the following permissions.
 
 - chat:write.public
