@@ -58,6 +58,8 @@ Finally we put that output into the following JSON. Use this message as the test
 }
 ```
 
-And that is all, you should see a notification when you run the test.
+And that is all, you should see a notification when you run the test. The result should be...
+
+![alt text](slack_notification.png "Slack Example Notification")
 
 
