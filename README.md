@@ -45,7 +45,7 @@ It is requried to encode the Pub/Sub test data as Base64. The snippet below is s
 }
 ```
 
-We need to take that plain JSON and convert it Base64 format. You can do this by going to https://www.browserling.com/tools/json-to-base64. The result is this.
+We need to take that plain JSON and convert it to Base64 format. You can do this by going to https://www.browserling.com/tools/json-to-base64. The result is this.
 ```
 ewogImNvc3RBbW91bnQiOiA1MDEsCiAiYnVkZ2V0QW1vdW50IjogMTAwMCwKICJidWRnZXREaXNwbGF5TmFtZSI6ICJ0ZXN0IiwKICJhbGVydFRocmVzaG9sZEV4Y2VlZGVkIjogMC41MAp9
 ```
