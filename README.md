@@ -1,17 +1,18 @@
 # Setup
 
-1. Go to https://api.slack.com/apps and create an access token with the following permissions. Save the Bot User OAuth Access Token somewhere as it is needed for the Cloud Function.
+1. Go to https://api.slack.com/apps and create an applicarion with the following permissions under OAuth and Permissions > Scopes > Bot Token Scopes. Save the Bot User OAuth Access Token somewhere as it is needed for the Cloud Function.
 
+**Slack App Permissions:**
 - chat:write.public
 - channels:join
 - chat:write
 - chat:write.customize
 
-2. Create a new Cloud Pub/Sub topic called ***billing-alerts***. This will topic will be used for the billing alert publisher.
+2. Create a new Cloud Pub/Sub topic called ***billing-alerts***. This topic will be used for the billing alert publisher.
 
-3. Navigate to Billing in the Google Cloud Console and create your budget. When creating your budget, modify "Manage notifications" to configure the Cloud Pub/Sub topic ***billing-alerts*** that was created in the previous step¹.
+3. Navigate to Billing in the Google Cloud Console and create a budget. When creating your budget, modify "Manage notifications" to configure the Cloud Pub/Sub topic ***billing-alerts*** that was created in the previous step¹.
 
-4. Navigate to Cloud Functions in the Google Cloud Console and create a new cloud function with the following values:
+4. Navigate to Cloud Functions in the Google Cloud Console and create a new cloud function with the following settings:
 
 - Name: slack-billing-notification
 - Trigger: Cloud Pub/Sub
@@ -23,7 +24,9 @@
 5. Configure two Runtime variables:
 
 - SLACK_CHANNEL: The name of the slack channel where the notifications should be sent to.
-- BOT_ACCESS_TOKEN: The Bot Token that was created in  the first step.
+- BOT_ACCESS_TOKEN: The Bot Token that was created in the first step.
+
+6. Add the index.json and package.json files to the inline editor.
 
 6. Click deploy.
 
