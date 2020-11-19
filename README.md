@@ -17,7 +17,7 @@
 
     - Name: slack-billing-notification
     - Trigger: Cloud Pub/Sub
-    - Topic: billing-alerts
+    - Topic: ***billing-alerts***
     - Source code: inline editor
     - Runtime: Node.js 10
     - Function to execute: notifySlack
