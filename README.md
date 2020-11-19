@@ -1,11 +1,11 @@
 # Setup
 
-1. **Go to https://api.slack.com/apps and create an applicarion with the following permissions under OAuth and Permissions > Scopes > Bot Token Scopes.**
+1. Go to https://api.slack.com/apps and create an applicarion with the following permissions under OAuth and Permissions > Scopes > Bot Token Scopes.
 
-- chat:write.public
-- channels:join
-- chat:write
-- chat:write.customize
+    - chat:write.public
+    - channels:join
+    - chat:write
+    - chat:write.customize
 
 2. Save the Bot User OAuth Access Token somewhere as it is needed for the Cloud Function.
 
