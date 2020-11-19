@@ -1,6 +1,6 @@
 # Setup
 
-1. Go to https://api.slack.com/apps and create an applicarion with the following permissions under OAuth and Permissions > Scopes > Bot Token Scopes.
+1. **Go to https://api.slack.com/apps and create an applicarion with the following permissions under OAuth and Permissions > Scopes > Bot Token Scopes.**
 
 - chat:write.public
 - channels:join
