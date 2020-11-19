@@ -1,13 +1,11 @@
 # Setup
 
-1. Go to https://api.slack.com/apps and create an access token with the following permissions.
+1. Go to https://api.slack.com/apps and create an access token with the following permissions. Save the Bot User OAuth Access Token somewhere as it is needed for the Cloud Function.
 
 - chat:write.public
 - channels:join
 - chat:write
 - chat:write.customize
-
-Save the Bot User OAuth Access Token somewhere as it is needed for the Cloud Function.
 
 2. Create a new Cloud Pub/Sub topic called ***billing-alerts***. This will topic will be used for the billing alert publisher.
 
@@ -27,7 +25,9 @@ Save the Bot User OAuth Access Token somewhere as it is needed for the Cloud Fun
 - SLACK_CHANNEL: The name of the slack channel where the notifications should be sent to.
 - BOT_ACCESS_TOKEN: The Bot Token that was created in  the first step.
 
-5. Click deploy. When deployment finished, go to the Testing tab to confirm functionality.
+6. Click deploy. When deployment finished, go to the Testing tab.
+
+### Testing
 
 It is requried to encode the Pub/Sub test data as Base64. The snippet below is plain JSON.
 ```
