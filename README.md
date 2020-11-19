@@ -15,17 +15,17 @@
 
 5. Navigate to Cloud Functions in the Google Cloud Console and create a new cloud function with the following settings:
 
-- Name: slack-billing-notification
-- Trigger: Cloud Pub/Sub
-- Topic: billing-alerts
-- Source code: inline editor
-- Runtime: Node.js 10
-- Function to execute: notifySlack
+    - Name: slack-billing-notification
+    - Trigger: Cloud Pub/Sub
+    - Topic: billing-alerts
+    - Source code: inline editor
+    - Runtime: Node.js 10
+    - Function to execute: notifySlack
 
 6. Configure two Runtime variables:
 
-- SLACK_CHANNEL: The name of the slack channel where the notifications should be sent to.
-- BOT_ACCESS_TOKEN: The Bot Token that was created in the first step.
+    - SLACK_CHANNEL: The name of the slack channel where the notifications should be sent to.
+    - BOT_ACCESS_TOKEN: The Bot Token that was created in the first step.
 
 7. Add the index.json and package.json files to the inline editor.
 
