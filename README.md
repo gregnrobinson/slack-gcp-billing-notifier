@@ -104,6 +104,6 @@ And that is all, you should see a notification when you run the test. The result
 
 I recommend adding an icon to the app to make it pretty. You can do that here: https://api.slack.com/apps.
 
-*This walkthrough is based on https://medium.com/momenton/slack-notifications-for-google-cloud-billing-7bf72bcbace. I cant take full credit but there were a handful of errors in his code and I wanted to make the testing portion more clear*
+*This walkthrough is based on https://medium.com/momenton/slack-notifications-for-google-cloud-billing-7bf72bcbace. I cant take full credit but there were a handful of errors in his code and I wanted to make the testing portion more clear.*
 
 
