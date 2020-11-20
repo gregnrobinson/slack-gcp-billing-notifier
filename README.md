@@ -76,22 +76,22 @@ This setup explains how to start receiving budget notifications on slack. The Se
 It is requried to encode the Pub/Sub test data as Base64. The snippet below is some plain JSON data that would be similar to the actual data.
 ```
 {
- "costAmount": 501,
+ "costAmount": 999,
  "budgetAmount": 1000,
  "budgetDisplayName": "test",
- "alertThresholdExceeded": 0.50
+ "alertThresholdExceeded": 0.99
 }
 ```
 
 We need to take that plain JSON and convert it to Base64 format. You can do this by going to https://www.browserling.com/tools/json-to-base64. The result is this.
 ```
-ewogImNvc3RBbW91bnQiOiA1MDEsCiAiYnVkZ2V0QW1vdW50IjogMTAwMCwKICJidWRnZXREaXNwbGF5TmFtZSI6ICJ0ZXN0IiwKICJhbGVydFRocmVzaG9sZEV4Y2VlZGVkIjogMC41MAp9
+ewogImNvc3RBbW91bnQiOiA5OTksCiAiYnVkZ2V0QW1vdW50IjogMTAwMCwKICJidWRnZXREaXNwbGF5TmFtZSI6ICJ0ZXN0IiwKICJhbGVydFRocmVzaG9sZEV4Y2VlZGVkIjogMC45OQp9
 ```
 
 Finally we put that output into the following JSON. Use this message as the test input for the Cloud Function.
 ```
 {
- "data": "ewogImNvc3RBbW91bnQiOiA1MDEsCiAiYnVkZ2V0QW1vdW50IjogMTAwMCwKICJidWRnZXREaXNwbGF5TmFtZSI6ICJ0ZXN0IiwKICJhbGVydFRocmVzaG9sZEV4Y2VlZGVkIjogMC41MAp9",
+ "data": "ewogImNvc3RBbW91bnQiOiA5OTksCiAiYnVkZ2V0QW1vdW50IjogMTAwMCwKICJidWRnZXREaXNwbGF5TmFtZSI6ICJ0ZXN0IiwKICJhbGVydFRocmVzaG9sZEV4Y2VlZGVkIjogMC45OQp9",
  "attributes": {
        "budgetId": "test"
  }
