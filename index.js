@@ -19,7 +19,7 @@ exports.notifySlack = async (data, context) => {
     const budgetAmount = formatter.format(pubsubData.budgetAmount);
     const budgetName = pubsubData.budgetDisplayName;
     const createdAt = new Date().toISOString();
-    let threshold = (pubsubData.alertThresholdExceeded*100).toFixed(0);
+    let threshold = parseInt((pubsubData.alertThresholdExceeded*100).toFixed(0));
     
     if (!isFinite(threshold)){
         threshold = 0;
