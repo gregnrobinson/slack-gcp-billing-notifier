@@ -4,7 +4,6 @@ This setup explains how to start receiving budget notifications on slack. The Se
 
 ![alt text](https://github.com/gregnrobinson/slack-gcp-billing-notifier/blob/main/images/architecture.png "Architecture")
 
-
 1. Go to https://api.slack.com/apps and create an applicarion with the following permissions under ***OAuth and Permissions > Scopes > Bot Token Scopes.***
 
     - chat:write.public
@@ -104,5 +103,7 @@ And that is all, you should see a notification when you run the test. The result
 ![alt text](https://github.com/gregnrobinson/slack-gcp-billing-notifier/blob/main/images/slack_notification.png "Slack Example Notification")
 
 I recommend adding an icon to the app to make it pretty. You can do that here: https://api.slack.com/apps.
+
+*This walkthrough is based on https://medium.com/momenton/slack-notifications-for-google-cloud-billing-7bf72bcbace. I cant take full credit but there were a handful of errors in his code and I wanted to make the testing portion more clear*
 
 
