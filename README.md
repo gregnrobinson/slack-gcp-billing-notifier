@@ -1,4 +1,5 @@
 # Setup
+[![Known Vulnerabilities](https://snyk.io/test/github/{username}/{repo}/badge.svg)](https://snyk.io/test/github/{username}/{repo})
 
 This setup explains how to start receiving budget notifications on slack. The Services used in this setup include Pub/Sub, Budgets, BigQuery, and Cloud Functions. A Budget message will be sent to Pub/Sub which will trigger a Cloud Function where the function uses the submitted Pub/Sub data to create an entry in a table within BigQuery. After data has been sent to BigQuery, a query and a condition take place to ensure that duplicate messages are not sent to Slack. Using a BigQuery table to place the data first allows for the Cloud Function to analyze the data before sending it to Slack.
 
