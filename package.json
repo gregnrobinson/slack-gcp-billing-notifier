@@ -3,7 +3,7 @@
  "version": "0.0.1",
  "dependencies": {
  "slack": "^11.0.1",
- "@google-cloud/bigquery": "^2.0.6",
+ "@google-cloud/bigquery": "^5.0.0",
  "@google-cloud/pubsub": "^0.18.0"
  }
 }
